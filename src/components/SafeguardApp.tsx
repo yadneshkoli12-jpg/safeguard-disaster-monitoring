@@ -567,7 +567,7 @@ export default function SafeguardApp() {
 
   const renderHome = () => (
     <>
-      <div className="home-welcome-row"><div><span className="eyebrow">YOUR LOCAL PICTURE</span><h1>Stay aware. Stay ready.</h1><p>Current conditions and source-backed disaster awareness for {location.name}.</p></div><button className="button button-secondary refresh-button" type="button" onClick={refreshAll}><RefreshCw size={15} />Refresh data</button></div>
+      <div className="home-welcome-row"><div><span className="eyebrow">LOCAL CONDITIONS & DISASTER STATUS</span><h1>Stay aware. Stay ready.</h1><p>Current conditions and source-backed disaster awareness for {location.name}.</p></div><button className="button button-secondary refresh-button" type="button" onClick={refreshAll}><RefreshCw size={15} />Refresh data</button></div>
       <div className="home-feature-grid">
         <WeatherHero location={location} state={weatherResource.state} advisories={advisories} onRetry={weatherResource.retry} />
         <AirQualityCard state={airResource.state} onRetry={airResource.retry} onDetails={() => setActiveView("weather")} />
